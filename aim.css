@@ -25,6 +25,7 @@
 	height: 100vh; 
     /* background: rgba(0, 0, 0, 10); */
 	background-image: url(assets/sound/backround.gif);
+    background-size: cover;
     margin: 0;
     justify-content: center;
     align-items: center;
