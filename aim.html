@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="aim.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>не доделал если чё</title>
+    <script src="aim.js"></script>
+</head>
+<body>
+<div id="bg">
+
+<div  class="container"> 
+    <svg class="window" onclick="fire(event)">
+
+        <defs>
+            <pattern id="image" x="0%" y="0%" height="100%" width="100%">
+                <image x="0%" y="0%" width="61" height="61" xlink:href="https://media.tenor.com/b2Q8nyvkW2kAAAAC/duck-pixel.gif"></image>
+            </pattern>
+        </defs>
+        <circle id="circle" cx="600" cy="235" r="30" fill="url(#image)"/>
+
+    </svg>
+    </div>
+<div class="scored-container">
+    <p>SCORED: <a id="clicks">0</a></p>
+    <p>TIME: <a id="maxTime">00:000ms</a></p>
+    <p>MAX RESULT: <a id="maxScored">0</a></p>
+    <p onclick="startTimer()">TIMER: <a id="timer">00:00:00:0000</a></p>
+</div>
+</div>
+
+
+</body>
+</html>

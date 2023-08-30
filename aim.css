@@ -1,0 +1,42 @@
+.window{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    cursor: crosshair;
+    width: 100%;
+    height: 88%;
+}
+@font-face {
+    font-family: minecraft;
+    src: url(assets/better-vcr_0.ttf);
+}
+.scored-container{
+    font-family: minecraft;
+    display: flex;
+    justify-content: space-evenly;
+    line-height: 5px;
+    border: 0px solid #ffffff;
+    font-size:23px;
+    text-shadow: 2px 0 10px;
+}
+#bg{
+    width: 100%;
+	height: 100%; 
+    /* background: rgba(0, 0, 0, 10); */
+	background-image: url(assets/sound/backround.gif);
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+}
+/* @media(max-width:900){
+
+} */
