@@ -1,3 +1,4 @@
+screen.lockOrientation("landscape");
 var scored = 0;
 var clientHeight = 0;
 var coordWidth = window.innerWidth;
