@@ -22,11 +22,11 @@
     /* border: 1px solid black; */
     font-size:1.9vh ;
     text-shadow: 0.3em 0 0.3em;
+    text-align: center;
 }
 @media (min-width:961px){
     .scored-container{
         font-size: 1.7vw;
-        
     }
 }
 #bg{
