@@ -1,21 +1,32 @@
 var scored = 0;
-var coordWidth = 1200;
-var coordHeight = 470;
+var clientHeight = 0;
+var coordWidth = window.innerWidth;
+var coordHeight = window.innerHeight;
 var scoredMax = 0;
 
 var timerId; // идентификатор таймера
 var startTimestamp; // время старта таймера
 var milliseconds = 0;
 var seconds = 0;
+var minutes = 0;
 
 //cx = 30 cy = 30
 //max  cx 1200 = cy = 470
-console.log("width " + window.screen.width);
-console.log("height " + window.screen.height);
+console.log("width " + coordWidth);
+console.log("height " + coordHeight);
 var audioArr = ["assets/sound/sniper.mp3", "assets/sound/target.mp3","aseets/sound/loose.mp3"];
 
 var flag = false;
+
+function SC(){
+  let box = document.querySelector('.scored-container');
+  let width = box.offsetWidth;
+  clientHeight = box.offsetHeight;
+  console.log('высота ',clientHeight);
+}
+
 function fire(event) {
+  SC();
   if(event.target.id === "circle"){  
     playRandomAudio();
     scored+=1;
@@ -36,15 +47,15 @@ function fire(event) {
       console.log("max scored: " + scoredMax);
       document.getElementById("maxScored").innerHTML = scoredMax;
       var elementTime =  document.getElementById("maxTime");
-      elementTime.textContent = pad(seconds,2) + ":" + pad(milliseconds,3);
+      elementTime.textContent = pad(minutes, 2) + ":" +  pad(seconds,2) + ":" + pad(milliseconds,3);
     } 
     
     // var audio = new Audio(audioArr[3]);
     // audio.volume = 0.3;
     // audio.play();
     
-    circle.setAttribute("cx", 600);
-    circle.setAttribute("cy", 235);
+    circle.setAttribute("cx", coordWidth/2);
+    circle.setAttribute("cy", coordHeight/2);
     console.log("SCORED " + scored);    
     stop();
     scored = 0;
@@ -62,7 +73,7 @@ function fire(event) {
     var currentTime = Date.now() - startTimestamp; // текущее время с момента старта в миллисекундах
   
     // преобразуем время в формат "чч:мм:сс.мсс"
-    var minutes = Math.floor(currentTime / 60000);
+    minutes = Math.floor(currentTime / 60000);
     seconds = Math.floor((currentTime % 60000) / 1000);
     milliseconds = currentTime % 1000;
     var timerElement = document.getElementById("timer");
@@ -101,7 +112,7 @@ function fire(event) {
   }
 
   function getRandomCoordY(coordHeight){
-    return  Math.floor(Math.random() * (this.coordHeight - 30 + 1) + 30);
+    return  Math.floor(Math.random() * ((this.coordHeight - clientHeight*2) - 30 + 1) + 30);
   }
   console.log(getRandomCoordX(coordWidth));
   console.log(getRandomCoordY(coordHeight));
