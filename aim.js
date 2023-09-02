@@ -1,8 +1,7 @@
-screen.lockOrientation("landscape");
 var scored = 0;
 var clientHeight = 0;
-var coordWidth = window.innerWidth;
-var coordHeight = window.innerHeight;
+var coordWidth;
+var coordHeight;
 var scoredMax = 0;
 
 var timerId; // идентификатор таймера
@@ -27,6 +26,8 @@ function SC(){
 }
 
 function fire(event) {
+  coordWidth = window.innerWidth;
+  coordHeight = window.innerHeight;
   SC();
   if(event.target.id === "circle"){  
     playRandomAudio();
