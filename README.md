@@ -1,3 +1,3 @@
 # aimLabka
-не люблю сосать хуи ;)
-![hippo](https://i.yapx.cc/KPG5N.gif)
+Пон
+![cat](https://github.com/RayanGuslya/aimLabka/assets/131702558/6d446766-265a-4a9c-bb38-4d6e03e85ead)
